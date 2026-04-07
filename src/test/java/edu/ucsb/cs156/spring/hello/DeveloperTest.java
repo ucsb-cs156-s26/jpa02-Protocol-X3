@@ -25,8 +25,26 @@ public class DeveloperTest {
         assertEquals("Whisper", Developer.getName());
     }
 
+    @Test
     public void getGithubId_returns_correct_githubId() {
         assertEquals("Protocol-X3", Developer.getGithubId());
+    }
+
+    @Test
+    public void getTeam_returns_team_with_correct_name() {
+        Team  t = Developer.getTeam();
+        assertEquals("s26-01", t.getName());
+    }
+
+    @Test
+    public void getTeam_returns_team_with_correct_members() {
+        Team  t = Developer.getTeam();
+        assertTrue(t.getMembers().contains("Whisper"),"Team should contain Whisper");
+        assertTrue(t.getMembers().contains("Andy"),"Team should contain Andy");
+        assertTrue(t.getMembers().contains("Shanqin"),"Team should contain Shanqin");
+        assertTrue(t.getMembers().contains("Oscar"),"Team should contain Oscar");
+        assertTrue(t.getMembers().contains("Sherwin"),"Team should contain Sherwin");
+        assertTrue(t.getMembers().contains("Binghao"),"Team should contain Binghao");
     }
 
     // TODO: Add additional tests as needed to get to 100% jacoco line coverage, and
