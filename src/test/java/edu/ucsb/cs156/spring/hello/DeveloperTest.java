@@ -25,6 +25,10 @@ public class DeveloperTest {
         assertEquals("Whisper", Developer.getName());
     }
 
+    public void getGithubId_returns_correct_githubId() {
+        assertEquals("Protocol-X3", Developer.getGithubId());
+    }
+
     // TODO: Add additional tests as needed to get to 100% jacoco line coverage, and
     // 100% mutation coverage (all mutants timed out or killed)
 
